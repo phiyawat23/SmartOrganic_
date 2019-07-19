@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartOrganic</string>
+    <color name="bg_color">#e2ffff</color>
+    <color name="btn_color">#8ec1c1</color>
+</resources>
