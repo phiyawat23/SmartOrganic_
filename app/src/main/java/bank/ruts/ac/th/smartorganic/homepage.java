@@ -10,7 +10,7 @@ import android.widget.Toast;
 import android.widget.TextView;
 
 public class homepage extends AppCompatActivity {
-    Button bt_logout;
+    Button bt_logout,bt_history,bt_order;
     MediaPlayer bg,btn_click;
     TextView name1,passwd1;
     @Override
@@ -21,6 +21,8 @@ public class homepage extends AppCompatActivity {
         btn_click = MediaPlayer.create(this,R.raw.effect_btn_shut);
 
         bt_logout = (Button)findViewById(R.id.btn_logout);
+        bt_history = (Button)findViewById(R.id.btn_history);
+        bt_order = (Button)findViewById(R.id.btn_order);
         name1 = (TextView)findViewById(R.id.textname);
         passwd1 = (TextView)findViewById(R.id.textpass);
 
@@ -30,6 +32,22 @@ public class homepage extends AppCompatActivity {
                 Intent login = new Intent(homepage.this,Login.class);
                 btn_click.start();
                 startActivity(login);
+            }
+        });
+
+        bt_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent order = new Intent(homepage.this,Order.class);
+                startActivity(order);
+            }
+        });
+
+        bt_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent history = new Intent(homepage.this,History.class);
+                startActivity(history);
             }
         });
 

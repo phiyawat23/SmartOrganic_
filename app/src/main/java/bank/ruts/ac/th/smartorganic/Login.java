@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
     MediaPlayer bg,btn_click;
-    Button bt_log;
+    Button bt_log,bt_ulog;
     EditText username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
         btn_click = MediaPlayer.create(this,R.raw.effect_btn_shut);
 
         bt_log = (Button)findViewById(R.id.btn_login);
+        bt_ulog = (Button)findViewById(R.id.btn_ulogin);
         username = (EditText)findViewById(R.id.u_name);
         password = (EditText)findViewById(R.id.passwd);
 
@@ -36,6 +37,14 @@ public class Login extends AppCompatActivity {
                 bg.stop();
                 startActivity(home);
 
+            }
+        });
+
+        bt_ulog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent user = new Intent(Login.this,UserLogin.class);
+                startActivity(user);
             }
         });
 

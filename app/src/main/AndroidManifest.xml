@@ -16,8 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".homepage"></activity>
+        <activity android:name=".homepage" />
+        <activity android:name=".UserLogin" />
+        <activity android:name=".Product" />
+        <activity android:name=".Contact" />
+        <activity android:name=".Purchase" />
+        <activity android:name=".History" />
+        <activity android:name=".Order"></activity>
     </application>
 
 </manifest>
